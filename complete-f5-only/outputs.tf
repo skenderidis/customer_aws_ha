@@ -19,4 +19,5 @@ output "private_addresses_2" {
 
  output tls_privatekey {
    value = tls_private_key.f5_key.private_key_pem
+   sensitive = true
  }
