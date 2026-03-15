@@ -12,11 +12,11 @@ module bigip_ha_1 {
   source                      = "F5Networks/bigip-module/aws"
   prefix                      = "bigip-01"
   ec2_key_name                = aws_key_pair.f5.key_name
-  mgmt_subnet_ids             = [{ "subnet_id" = var.mgmt_1_id, "public_ip" = true, "private_ip_primary" =  var.mgmt_ip_1}]
+  mgmt_subnet_ids             = [{ "subnet_id" = var.subnet_mgmt_1_id, "public_ip" = true, "private_ip_primary" =  var.mgmt_ip_1}]
   mgmt_securitygroup_ids      = [var.sec_group_mgmt_id]
-  external_subnet_ids         = [{ "subnet_id" = var.ext_1_id, "public_ip" = true, "private_ip_primary" = var.ext_ip_1, "private_ip_secondary" = var.ext_ip_sec_1}]
+  external_subnet_ids         = [{ "subnet_id" = var.subnet_ext_1_id, "public_ip" = true, "private_ip_primary" = var.ext_ip_1, "private_ip_secondary" = var.ext_ip_sec_1}]
   external_securitygroup_ids  = [var.sec_group_ext_id]
-  internal_subnet_ids         = [{"subnet_id" =  var.int_1_id, "public_ip"=false, "private_ip_primary" = var.int_ip_1}]
+  internal_subnet_ids         = [{"subnet_id" =  var.subnet_int_1_id, "public_ip"=false, "private_ip_primary" = var.int_ip_1}]
   internal_securitygroup_ids  = [var.sec_group_int_id]
   ebs_volume_size  = 100
   sleep_time                  = "400s"
@@ -43,11 +43,11 @@ module bigip_ha_2 {
   source                      = "F5Networks/bigip-module/aws"
   prefix                      = "bigip-02"
   ec2_key_name                = aws_key_pair.f5.key_name
-  mgmt_subnet_ids             = [{ "subnet_id" = var.mgmt_2_id, "public_ip" = true, "private_ip_primary" =  var.mgmt_ip_2}]
+  mgmt_subnet_ids             = [{ "subnet_id" = var.subnet_mgmt_2_id, "public_ip" = true, "private_ip_primary" =  var.mgmt_ip_2}]
   mgmt_securitygroup_ids      = [var.sec_group_mgmt_id]
-  external_subnet_ids         = [{ "subnet_id" = var.ext_2_id, "public_ip" = true, "private_ip_primary" = var.ext_ip_2, "private_ip_secondary" = var.ext_ip_sec_2}]
+  external_subnet_ids         = [{ "subnet_id" = var.subnet_ext_2_id, "public_ip" = true, "private_ip_primary" = var.ext_ip_2, "private_ip_secondary" = var.ext_ip_sec_2}]
   external_securitygroup_ids  = [var.sec_group_ext_id]
-  internal_subnet_ids         = [{"subnet_id" =  var.int_2_id, "public_ip"=false, "private_ip_primary" = var.int_ip_2}]
+  internal_subnet_ids         = [{"subnet_id" =  var.subnet_int_2_id, "public_ip"=false, "private_ip_primary" = var.int_ip_2}]
   internal_securitygroup_ids  = [var.sec_group_int_id]
   sleep_time                  = "400s"
   f5_ami_search_name          = "F5 BIGIP-17.5* PAYG-Best Plus 25Mbps*"

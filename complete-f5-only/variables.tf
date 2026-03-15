@@ -16,6 +16,26 @@ variable "owner" {
 }
 
 
+
+variable "sec_group_mgmt_id" {
+  description = "MGMT subnet ID Device 1"
+  type        = string
+  default     = "sg-02083867a126b048f"
+}
+
+variable "sec_group_ext_id" {
+  description = "EXT subnet ID Device 1"
+  type        = string
+  default     = "sg-0295423cbe1da8958"
+}
+
+variable "sec_group_int_id" {
+  description = "EXT subnet ID Device 1"
+  type        = string
+  default     = "sg-0785347fe96464b41"
+}
+
+
 variable "subnet_mgmt_1_id" {
   description = "MGMT subnet ID Device 1"
   type        = string
