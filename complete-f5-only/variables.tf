@@ -38,18 +38,15 @@ variable "sec_group_int_id" {
 variable "pub_key" {
   description = "Public Key for F5 BIGIP"
   type        = string
-  default     = ""
 }
 
 variable "license_1" {
   description = "License for Device 1"
   type        = string
-  default     = ""
 }
 variable "license_2" {
   description = "License for Device 2"
   type        = string
-  default     = ""
 }
 
 variable "subnet_mgmt_1_id" {
